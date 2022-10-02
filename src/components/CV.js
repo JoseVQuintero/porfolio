@@ -68,11 +68,10 @@ const Contact = () => {
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
         <Box component="form" className={classes.form}>
-          <a target="_blank" href="">
-            <Button
-              endIcon={<CloudDownloadIcon />}
-              className={classes.button}
-            >CV</Button>
+          <a target="_blank" href="http://shopintegrate.online/public/cv.pdf">
+            <Button endIcon={<CloudDownloadIcon />} className={classes.button}>
+              CV
+            </Button>
           </a>
         </Box>
       </Grid>
