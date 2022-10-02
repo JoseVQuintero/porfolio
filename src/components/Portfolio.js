@@ -24,7 +24,6 @@ import shopintegrate from "../images/shopintegrate.png";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "#233",
     height: "100%",
   },
   cardContainer: {

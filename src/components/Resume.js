@@ -186,7 +186,7 @@ const Resume = () => {
             Control de autoparte | estado de autobus llantas
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
-            Asociada con Autotransportes de la Baja California
+            Autotransportes de la Baja California
           </Typography>
           <Typography
             variant="subtitle1"
@@ -194,6 +194,32 @@ const Resume = () => {
             className={classes.subtitle1}
           >
             PHP, Mysql, Codeignaiter, Boostrap
+          </Typography>
+        </Box>
+        <Typography
+          variant="h2"
+          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+        >
+          2016
+        </Typography>
+        <Box component="div" className={classes.timeLineItem}>
+          <Typography
+            variant="h5"
+            align="center"
+            className={classes.subHeading}
+          >
+          Facturación Electronica
+          </Typography>
+          <Typography variant="body1" align="center" className={classes.body1}>
+            Itimbre
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            align="center"
+            className={classes.subtitle1}
+          >
+            Facturación electronica, Factura Implementation CFDI 3.3, PHP,
+            Mysql, jquery
           </Typography>
         </Box>
         <Typography
@@ -218,8 +244,8 @@ const Resume = () => {
             align="center"
             className={classes.subtitle1}
           >
-            Administra el ciclo de vida de olimpiada estatal, imprime credenciales
-            PHP, mysql, css
+            Administra el ciclo de vida de olimpiada estatal, imprime
+            credenciales PHP, mysql, css
           </Typography>
         </Box>
       </Box>

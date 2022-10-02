@@ -17,7 +17,7 @@ import AssignmentInd from "@material-ui/icons/AssignmentInd";
 import Home from "@material-ui/icons/Home";
 import Apps from "@material-ui/icons/Apps";
 import ContactMail from "@material-ui/icons/ContactMail";
-import { makeStyles } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
 import avatar from "../avatar.png";
 
 import aws from "../images/img/technologies/aws.png"
@@ -37,6 +37,9 @@ import github from "../images/img/technologies/github.png";
 import php from "../images/img/technologies/php.png";
 
 import Footer from "../components/Footer";
+
+import Button from "@material-ui/core/Button";
+import Tooltip from "@material-ui/core/Tooltip";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -65,14 +68,32 @@ const useStyles = makeStyles((theme) => ({
     color: "tan",
   },
   small: {
-    width: "100%",
-    height: "100%",
+    width: "90%",
+    height: "90%",
   },
   large: {
     width: theme.spacing(7),
     height: theme.spacing(7),
   },
+  tooltip: {
+    backgroundColor: theme.palette.common.black,
+  },
 }));
+
+const useStylesBootstrap = makeStyles((theme) => ({
+  arrow: {
+    color: theme.palette.common.black,
+  },
+  tooltip: {
+    backgroundColor: theme.palette.common.black,
+  },
+}));
+
+function BootstrapTooltip(props) {
+  const classes = useStylesBootstrap();
+
+  return <Tooltip arrow classes={classes} {...props} />;
+}
 
 const menuItems = [
   { listIcon: <Home />, listText: "Home", listPath: "/" },
@@ -90,7 +111,7 @@ const Navbar = () => {
 
   const sideList = () => (
     <Box className={classes.menuSliderContainer} component="div">
-      <Avatar className={classes.avatar} src={avatar} alt="Mahmudul Alam" />
+      <Avatar className={classes.avatar} src={avatar} alt="Jose Quintero" />
       <Divider />
       <List>
         {menuItems.map((item, i) => (
@@ -123,51 +144,81 @@ const Navbar = () => {
             <Typography variant="h5" className={classes.title}>
               Portfolio
             </Typography>
-            <IconButton onClick={() => setOpen(true)}>
-              <Avatar src={aws} className={classes.small} />
+            <BootstrapTooltip title="Aws">
+            <IconButton alt="Aws" onClick={() => setOpen(true)}>
+              <Avatar   src={aws} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="Node">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={node} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="Type Script">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={typescript} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="Postgres">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={postgresql} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="Prisma">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={prisma} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="Sequelize">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={sequelize} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="Sequelize">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={redux} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="React">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={react} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="Style Component">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={styledcomponents} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="Material UI">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={materialui} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="Android">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={android} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="Mysql">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={mysql} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="Git">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={git} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="Git Hub">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={github} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
+            <BootstrapTooltip title="PHP">
             <IconButton onClick={() => setOpen(true)}>
               <Avatar src={php} className={classes.small} />
             </IconButton>
+            </BootstrapTooltip>
           </Toolbar>
         </AppBar>
       </Box>

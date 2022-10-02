@@ -41,12 +41,16 @@ import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "#233",
     height: "100%",
+    justify: "center"
   },
   cardContainer: {
     maxWidth: 345,
     margin: "3rem auto",
+  },
+  small: {
+    width: "100%",
+    height: "100%",
   },
 }));
 
@@ -142,14 +146,23 @@ const projects = [
 const Portfolio = () => {
   const classes = useStyles();
   return (
-    <Box component="div" className={classes.mainContainer}>      
+    <Box component="div" className={classes.mainContainer}>
       <Grid container justify="center">
         {projects.map((project, i) => (
-          <Grid item xs={12} sm={2}  key={i}>
+          <Grid
+            item
+            xs={2}
+            key={i}
+            justify="center"
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+          >
             <IconButton>
               <Avatar src={project.image} className={classes.small} />
             </IconButton>
-            <Typography variant="h5" gutterBottom>
+            <Typography variant="h7" style={{color:'white'}}>
               {project.name}
             </Typography>
           </Grid>
