@@ -18,9 +18,26 @@ import project4 from "../images/mern-stack.jpg";
 import project5 from "../images/pokemon.png";
 import project6 from "../images/react.png";
 
-import pokemon from "../images/pokemon.png";
+import aws from "../images/img/technologies/aws.png";
+import node from "../images/img/technologies/node.png";
+import postgresql from "../images/img/technologies/postgresql.png";
+import sequelize from "../images/img/technologies/sequelize.png";
+import redux from "../images/img/technologies/redux.png";
+import prisma from "../images/img/technologies/prisma.png";
+import react from "../images/img/technologies/react.png";
+import materialui from "../images/img/technologies/material-ui.png";
+import styledcomponents from "../images/img/technologies/styled-components.png";
+import typescript from "../images/img/technologies/typescript.png";
+import android from "../images/img/technologies/android.png";
+import mysql from "../images/img/technologies/mysql.png";
+import git from "../images/img/technologies/git.png";
+import github from "../images/img/technologies/github.png";
+import php from "../images/img/technologies/php.png";
 import compustore from "../images/compustore.png";
 import shopintegrate from "../images/shopintegrate.png";
+
+import IconButton from "@material-ui/core/IconButton";
+import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -35,31 +52,66 @@ const useStyles = makeStyles((theme) => ({
 
 const projects = [
   {
-    name: "Proyecto Final (grupal) Henry eCommerce",
-    description: `Ciclo de vida de un eCommerce CompuStore`,
-    image: compustore,
-    url: "http://ec2-18-119-113-192.us-east-2.compute.amazonaws.com:3003/",
+    name: "Node",
+    image: node,
   },
   {
-    name: "Proyecto individual Henry Pokemons",
-    description: `Administra items pokemons de una api externa`,
-    image: pokemon,
-    url: "http://ec2-18-119-113-192.us-east-2.compute.amazonaws.com:3002/",
+    name: "Postgres",
+    image: postgresql,
   },
   {
-    name: "Gestor eCommerce",
-    description: `Administra y conecta Woocommerce OpenCart con Ingram Micro`,
-    image: shopintegrate,
-    url: "http://shopintegrate.online",
-    images: [
-      "https://shopintegrate.online/public/1.JPG",
-      "https://shopintegrate.online/public/2.JPG",
-      "https://shopintegrate.online/public/3.JPG",
-      "https://shopintegrate.online/public/4.JPG",
-      "https://shopintegrate.online/public/5.JPG",
-      "https://shopintegrate.online/public/6.JPG",
-      "https://shopintegrate.online/public/7.JPG",
-    ],
+    name: "Aws",
+    image: aws,
+  },
+  {
+    name: "Prisma",
+    image: prisma,
+  },
+  {
+    name: "Sequelize",
+    image: sequelize,
+  },
+  {
+    name: "Material UI",
+    image: materialui,
+  },
+  {
+    name: "MUI",
+    image: materialui,
+  },
+  {
+    name: "Type Script",
+    image: typescript,
+  },
+  {
+    name: "Style Component",
+    image: styledcomponents,
+  },
+  {
+    name: "React",
+    image: react,
+  },
+
+
+  {
+    name: "Android",
+    image: android,
+  },
+  {
+    name: "Mysql",
+    image: mysql,
+  },
+  {
+    name: "PHP",
+    image: php,
+  },
+  {
+    name: "Git",
+    image: git,
+  },
+  {
+    name: "Git Hub",
+    image: github,
   },
   /*{
     name: "Project 4",
@@ -90,42 +142,16 @@ const projects = [
 const Portfolio = () => {
   const classes = useStyles();
   return (
-    <Box component="div" className={classes.mainContainer}>
+    <Box component="div" className={classes.mainContainer}>      
       <Grid container justify="center">
-        {/* Projects */}
         {projects.map((project, i) => (
-          <Grid item xs={12} sm={8} md={4} key={i}>
-            <Card className={classes.cardContainer}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  alt="Project 1"
-                  height="100%"
-                  width="100%"
-                  image={project.image}
-                />
-                <CardContent>
-                  <Typography variant="h5" gutterBottom>
-                    {project.name}
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary">
-                    {project.description}
-                  </Typography>
-                </CardContent>
-                {project?.images?.map((image) => (
-                  <Button size="small" color="primary">                    
-                    <a target="_blank" href={image}><ContactMail /></a>
-                  </Button>
-                ))}
-              </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
-                  <a target="_blank" href={project?.url}>
-                    Live
-                  </a>
-                </Button>
-              </CardActions>
-            </Card>
+          <Grid item xs={12} sm={2}  key={i}>
+            <IconButton>
+              <Avatar src={project.image} className={classes.small} />
+            </IconButton>
+            <Typography variant="h5" gutterBottom>
+              {project.name}
+            </Typography>
           </Grid>
         ))}
       </Grid>

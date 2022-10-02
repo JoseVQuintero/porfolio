@@ -68,24 +68,24 @@ const Contact = () => {
       <Grid container justify="center">
         <Box component="form" className={classes.form}>
           <Typography variant="h5" className={classes.heading}>
-            Hire or Contact me...
+            Contactame...
           </Typography>
           <InputField
             fullWidth={true}
-            label="Name"
+            label="Nombre"
             variant="outlined"
             inputProps={{ className: classes.input }}
           />
           <InputField
             fullWidth={true}
-            label="Email"
+            label="Correo"
             variant="outlined"
             inputProps={{ className: classes.input }}
             className={classes.field}
           />
           <InputField
             fullWidth={true}
-            label="Message"
+            label="Mensaje"
             variant="outlined"
             multiline
             rows={4}
@@ -97,7 +97,7 @@ const Contact = () => {
             endIcon={<Send />}
             className={classes.button}
           >
-            Contact Me
+            Contactame
           </Button>
         </Box>
       </Grid>

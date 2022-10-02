@@ -80,6 +80,7 @@ const menuItems = [
   { listIcon: <Apps />, listText: "Portfolio", listPath: "/portfolio" },
   { listIcon: <Apps />, listText: "CV", listPath: "/cv" },
   { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
+  { listIcon: <ContactMail />, listText: "Habilidades", listPath: "/skills" },
 ];
 
 const Navbar = () => {
